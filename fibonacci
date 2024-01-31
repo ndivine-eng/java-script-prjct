@@ -1,0 +1,17 @@
+function sumevenFibonacci(limit) {
+let sum = 0;
+let prev = 1;
+let curr = 2;
+while (curr <= limit) {
+if (curr % 2 === 0) {
+sum += curr;
+}
+let next = prev + curr;
+prev = curr;
+curr = next;
+}
+return sum;
+}
+const limit = 4000000;
+const result = sumevenFibonacci(limit);
+console.log("Sum of even-valued terms in Fibonacci sequence up to", limit, ":", result);
